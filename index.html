@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website - LUKAS MULUSA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========= PART B1 STARTS HERE ========= -->
+
+  <header>
+    <!-- PLACE B1: Page title here, only ONE h1 -->
+    <h1>My Personal Website</h1>
+  </header>
+
+  <nav>
+  <a href="#about">About</a>
+  <a href="#hobbies">Interests</a>
+  <a href="#plan">Learning Plan</a>
+  <a href="#photos">Gallery</a>
+  <a href="#media">Media</a>
+  <a href="#contact">Contact</a>
+  <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Web Resources</a>
+</nav>
+
+  <main>
+    <!-- ALL SECTIONS GO INSIDE <main> -->
+
+ <section id="about">
+  <h2>About Me</h2>
+  <div class="underline"></div>
+  
+  <p>My name is Lukas Mulusa, and I am a Computer Science student at Mulungushi University in Zambia. My passion lies in software development, networking, database systems, human-computer interaction and emerging technologies.</p>
+
+  <p>I enjoy learning through hands-on experience, where I combine classroom knowledge with real projects. Creating websites and small applications helps me understand how modern systems operate and how technology can provide practical solutions to everyday challenges. I am currently improving my abilities in HTML, CSS, and JavaScript while exploring user-friendly design and Python programming.</p>
+
+  <p>My long-term vision is to design and develop accessible websites, mobile applications and digital tools that empower students, communities and small businesses to grow in the digital age.</p>
+</section>
+
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <!-- PLACE B2: ul with 3 hobbies HERE -->
+      <ul>
+        <li>Reading</li>
+        <li>Football</li>
+        <li>Coding</li>
+      </ul>
+    </section>
+
+     
+    <Section id="plan">
+     <section id="learning-plan" class="content-section">
+  <h2>My Learning Plan</h2>
+  <div class="underline"></div>
+  <p>Here is my weekly plan to improve my web development skills:</p>
+
+  <table>
+    <caption>My Weekly Web Learning Plan</caption>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Topic</th>
+        <th>Practice Task</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td>HTML5 Structure</td>
+        <td>Build header, nav and sections with proper tags</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>CSS Styling</td>
+        <td>Style gallery and make page responsive</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Media & Forms</td>
+        <td>Add video, audio and test contact form</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>GitHub & Testing</td>
+        <td>Upload project to GitHub and test on phone</td>
+      </tr>
+    </tbody>
+  </table>
+
+    </section>
+  </section>
+    <section id="photos">
+  <h2>Gallery</h2>
+  <div class="underline"></div>
+
+  <figure>
+    <img src="images/photo1.jpg" alt="Chilling home outside">
+    <figcaption>1. Chilling home outside</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/photo2.jpg" alt="During church">
+    <figcaption>2. During church</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/photo3.jpg" alt="New haircut">
+    <figcaption>3. New haircut</figcaption>
+  </figure>
+
+</section>
+
+    <section id="media" class="content-section">
+  <h2>My Media</h2>
+  <div class="underline"></div>
+  
+  <h3>My Introduction Video</h3>
+  <video controls width="100%" src="videos/intro.mp4">
+    Your browser does not support video.
+  </video>
+  <p><strong>Summary:</strong> I am Lukas Mulusa, Computer Science at Mulungushi University, studying ICT251. One skill I want to learn is responsive CSS design for mobile phones.</p>
+
+  <h3>My Voice Recording</h3>
+  <audio controls src="videos/voice.mp3">
+    Your browser does not support audio.
+  </audio>
+  <p>Description: This is my 1 minute audio about my passion and why I study web technology.</p>
+</section>
+
+    <section id="contact" class="content-section">
+  <h2>Contact Me</h2>
+  <div class="underline"></div>
+
+  <p><strong>Phone:</strong> <a href="tel:+260771118742">0771118742</a></p>
+  <p><strong>Email:</strong> <a href="mailto:lukasmulusa@gmail.com">lukasmulusa@gmail.com</a></p>
+  <p><strong>University:</strong> Mulungushi University, Kabwe, Zambia</p>
+
+  <h3>Send Me a Message</h3>
+  <form action="#" method="post">
+    <div>
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <div>
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    </div>
+
+    <div>
+      <label for="topic">Topic:</label><br>
+      <select id="topic" name="topic">
+        <option value="general">General Inquiry</option>
+        <option value="web-help">Web Development Help</option>
+        <option value="collaboration">Project Collaboration</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+    <p style="font-size:12px; color:#777; margin-top:8px;">Note: This form does not send data - browser demo only (action="#").</p>
+  </form>
+</section>
+
+  </main>
+
+  <footer>
+    <p>@2026_Lukas_Mulusa</p>
+  </footer>
+
+  <!-- ========= PART B1 ENDS HERE ========= -->
+
+</body>
+</html>
