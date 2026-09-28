@@ -3,14 +3,14 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f4ff;
+  background: #eef2ff;
   color: #333;
   line-height: 1.6;
 }
 
-/* COLORFUL HEADER - Gradient */
+/* BLUE & PURPLE HEADER */
 header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 40%, #7b2cbf 100%);
   color: white;
   text-align: center;
   padding: 70px 20px 60px 20px;
@@ -24,26 +24,26 @@ header h1 {
 }
 
 header .subtitle {
-  color: #ffeb3b;
+  color: #90e0ef;
   font-size: 19px;
   font-weight: 600;
   margin: 10px 0;
 }
 
 header .desc {
-  color: #e0e0ff;
+  color: #d8c7ff;
   font-size: 16px;
   max-width: 650px;
   margin: 15px auto 0 auto;
 }
 
-/* COLORFUL NAV */
+/* BLUE & PURPLE NAV */
 nav {
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px 10px;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #2a5298, #5a189a);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -55,7 +55,7 @@ nav a {
   color: white;
   font-weight: bold;
   font-size: 14px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.15);
   padding: 8px 15px;
   border-radius: 20px;
   transition: 0.3s;
@@ -63,12 +63,7 @@ nav a {
 
 nav a:hover {
   background: white;
-  color: #ee0979;
-}
-
-nav a:focus {
-  outline: 2px solid yellow;
-  outline-offset: 2px;
+  color: #5a189a;
 }
 
 main {
@@ -77,67 +72,50 @@ main {
   padding: 20px;
 }
 
-/* Element selector REQUIRED by Part D */
 section {
   margin-bottom: 40px;
   padding: 25px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  border: 1px solid #ddd; /* Box model border - REQUIRED */
-  border-left: 5px solid #667eea;
+  border: 1px solid #ddd;
+  border-left: 5px solid #2a5298;
 }
 
-/* Class selector REQUIRED by Part D */
 .content-section {
-  padding: 25px; /* box model - padding */
-  margin: 20px 0; /* box model - margin */
-  border: 1px solid #ddd; /* box model - border */
+  padding: 25px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
 }
 
-#about { border-left-color: #667eea; }
-#learning-plan { border-left-color: #764ba2; }
-#photos { border-left-color: #ee0979; }
-#media { border-left-color: #00c9a7; }
-#contact { border-left-color: #ff6a00; }
-
-/* ID selector REQUIRED by Part D */
-#hobbies {
-  background-color: #f0f4ff;
-}
+#about { border-left-color: #2a5298; }
+#hobbies { background-color: #eef2ff; border-left-color: #3a0ca3; }
+#learning-plan { border-left-color: #5a189a; }
+#photos { border-left-color: #4361ee; }
+#media { border-left-color: #7209b7; }
+#contact { border-left-color: #3a0ca3; }
 
 .underline {
   width: 60px;
   height: 4px;
-  background: linear-gradient(to right, #667eea, #ee0979);
+  background: linear-gradient(to right, #2a5298, #7b2cbf);
   margin-bottom: 20px;
   border-radius: 2px;
 }
 
-#about p {
-  text-align: justify;
-  color: #444;
-}
-
-/* Element selector h2 REQUIRED */
 h2 {
-  color: #333;
+  color: #1e3c72;
   font-size: 26px;
   margin-bottom: 5px;
 }
 
-/* FIXED FOR PART D - Responsive, no horizontal scroll */
 #photos {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
-
-#photos h2 {
-  width: 100%;
-}
-
+#photos h2 { width: 100%; }
 #photos figure {
   flex: 1 1 250px;
   max-width: 280px;
@@ -145,22 +123,18 @@ h2 {
   background: #fff;
   padding: 10px;
   border-radius: 12px;
-  border: 2px solid #eee;
+  border: 2px solid #dee2ff;
   transition: 0.3s;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
-
 #photos figure:hover {
   transform: translateY(-5px);
-  border-color: #ee0979;
+  border-color: #7b2cbf;
 }
 
-/* Element selector img - REQUIRED max-width 100% height auto */
 img, video, audio {
   max-width: 100%;
   height: auto;
 }
-
 #photos img {
   width: 100%;
   height: 210px;
@@ -168,118 +142,53 @@ img, video, audio {
   border-radius: 8px;
   display: block;
 }
-
 #photos figcaption {
   font-size: 14px;
   text-align: center;
   margin-top: 8px;
   font-weight: 600;
-  color: #764ba2;
+  color: #5a189a;
 }
 
-/* Contact colorful */
 #contact a {
-  color: #ee0979;
+  color: #3a0ca3;
   font-weight: bold;
   text-decoration: none;
 }
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
 footer {
   text-align: center;
   padding: 25px;
-  background: #121212;
+  background: linear-gradient(to right, #1e3c72, #3a0ca3);
   color: white;
   font-size: 14px;
   margin-top: 30px;
 }
 
-/* Learning Plan Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+caption { font-weight: bold; font-size: 16px; margin-bottom: 10px; color: #3a0ca3; }
+th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+th { background: linear-gradient(to right, #2a5298, #7b2cbf); color: white; }
+tr:nth-child(even) { background-color: #eef2ff; }
 
-caption {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #764ba2;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background: linear-gradient(to right, #667eea, #764ba2);
-  color: white;
-}
-
-tr:nth-child(even) {
-  background-color: #f8f0ff;
-}
-
-tr:hover {
-  background-color: #ffe6f0;
-}
-
-/* Contact Form - button attractive + hover REQUIRED */
-form div {
-  margin-bottom: 15px;
-}
-
-form label {
-  font-weight: bold;
-  color: #333;
-}
-
+form div { margin-bottom: 15px; }
+form label { font-weight: bold; }
 form input, form select, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
+  width: 100%; padding: 10px; margin-top: 5px;
+  border: 2px solid #ddd; border-radius: 8px;
   box-sizing: border-box;
 }
-
 form input:focus, form select:focus, form textarea:focus {
-  border-color: #667eea;
-  outline: 2px solid #667eea;
+  border-color: #4361ee; outline: 2px solid #4361ee;
 }
-
 form button {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  background: linear-gradient(to right, #2a5298, #7b2cbf);
+  color: white; border: none; padding: 12px 25px;
+  border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s;
 }
+form button:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(58,12,163,0.4); }
 
-form button:hover, form button:focus {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(238,9,121,0.4);
-  outline: 2px solid #667eea;
-}
-
-/* My Media - video/audio styled */
 #media video, #media audio {
-  border: 3px solid #eee;
-  border-radius: 12px;
-  display: block;
-  margin: 15px 0;
+  border: 3px solid #dee2ff; border-radius: 12px;
+  display: block; margin: 15px 0;
 }
-
-#media video:hover {
-  border-color: #00c9a7;
-}
+#media video:hover { border-color: #7b2cbf; }
