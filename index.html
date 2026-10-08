@@ -3,45 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website - LUKAS MULUSA</title>
+  <title>Lukas Mulusa | Interactive Computer Science Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
-  <!-- ========= PART B1 STARTS HERE ========= -->
-
+  <!-- Header Banner -->
   <header>
-    <!-- PLACE B1: Page title here, only ONE h1 -->
-    <h1>My Personal Website</h1>
+    <div class="banner-tag">COMPUTER SCIENCE PORTFOLIO</div>
+    <h1>Lukas Mulusa</h1>
+    <p class="subtitle">Computer Science Student | Web Technologies</p>
+    <p class="tagline">Exploring software development, digital design and practical technology through disciplined learning</p>
+    <a href="#skills" class="btn-gold">View My Projects</a>
   </header>
 
+  <!-- Sticky Navigation Bar -->
   <nav>
-  <a href="#about">About</a>
-  <a href="#hobbies">Interests</a>
-  <a href="#plan">Learning Plan</a>
-  <a href="#photos">Gallery</a>
-  <a href="#media">Media</a>
-  <a href="#contact">Contact</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Web Resources</a>
-</nav>
+    <a href="#about">About</a>
+    <a href="#hobbies">Interests</a>
+    <a href="#skills">Projects</a>
+    <a href="#plan">Learning Plan</a>
+    <a href="#photos">Gallery</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle" class="nav-theme-btn">Light mode</button>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Web Resources</a>
+  </nav>
 
   <main>
-    <!-- ALL SECTIONS GO INSIDE <main> -->
+    <!-- About Section -->
+    <section id="about" class="content-card">
+      <h2>About Me</h2>
+      <div class="underline"></div>
+      <p>My name is Lukas Mulusa, and I am a Computer Science student at Mulungushi University in Zambia. My passion lies in software development, networking, database systems, human-computer interaction and emerging technologies.</p>
+      <p>I enjoy learning through hands-on experience, where I combine classroom knowledge with real projects. Creating websites and small applications helps me understand how modern systems operate and how technology can provide practical solutions to everyday challenges.</p>
+    </section>
 
- <section id="about">
-  <h2>About Me</h2>
-  <div class="underline"></div>
-  
-  <p>My name is Lukas Mulusa, and I am a Computer Science student at Mulungushi University in Zambia. My passion lies in software development, networking, database systems, human-computer interaction and emerging technologies.</p>
-
-  <p>I enjoy learning through hands-on experience, where I combine classroom knowledge with real projects. Creating websites and small applications helps me understand how modern systems operate and how technology can provide practical solutions to everyday challenges. I am currently improving my abilities in HTML, CSS, and JavaScript while exploring user-friendly design and Python programming.</p>
-
-  <p>My long-term vision is to design and develop accessible websites, mobile applications and digital tools that empower students, communities and small businesses to grow in the digital age.</p>
-</section>
-
-    <section id="hobbies">
-      <h2>My Hobbies</h2>
-      <!-- PLACE B2: ul with 3 hobbies HERE -->
+    <!-- Interests / Hobbies -->
+    <section id="hobbies" class="content-card">
+      <h2>Interests</h2>
+      <div class="underline"></div>
       <ul>
         <li>Reading</li>
         <li>Football</li>
@@ -49,133 +51,151 @@
       </ul>
     </section>
 
-     
-    <Section id="plan">
-     <section id="learning-plan" class="content-section">
-  <h2>My Learning Plan</h2>
-  <div class="underline"></div>
-  <p>Here is my weekly plan to improve my web development skills:</p>
+    <!-- Projects Section -->
+    <section id="skills" class="content-card">
+      <h2>Projects</h2>
+      <div class="underline"></div>
+      <div class="filter-controls">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="web">Web Dev</button>
+        <button class="filter-btn" data-category="java">Java Applications</button>
+      </div>
 
-  <table>
-    <caption>My Weekly Web Learning Plan</caption>
-    <thead>
-      <tr>
-        <th>Day</th>
-        <th>Topic</th>
-        <th>Practice Task</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Monday</td>
-        <td>HTML5 Structure</td>
-        <td>Build header, nav and sections with proper tags</td>
-      </tr>
-      <tr>
-        <td>Wednesday</td>
-        <td>CSS Styling</td>
-        <td>Style gallery and make page responsive</td>
-      </tr>
-      <tr>
-        <td>Friday</td>
-        <td>Media & Forms</td>
-        <td>Add video, audio and test contact form</td>
-      </tr>
-      <tr>
-        <td>Sunday</td>
-        <td>GitHub & Testing</td>
-        <td>Upload project to GitHub and test on phone</td>
-      </tr>
-    </tbody>
-  </table>
-
+      <div class="projects-grid">
+        <div class="project-card" data-category="web">
+          <h3>Personal Portfolio Website</h3>
+          <p><strong>Category:</strong> Web Dev</p>
+          <p>A responsive HTML5, CSS3, and JavaScript portfolio deployed on Render.</p>
+        </div>
+        <div class="project-card" data-category="java">
+          <h3>Customer Manager App</h3>
+          <p><strong>Category:</strong> Java Applications</p>
+          <p>Built using JavaFX, Gradle, and MVC architecture for managing customer data.</p>
+        </div>
+        <div class="project-card" data-category="web">
+          <h3>Digital Logic Helper</h3>
+          <p><strong>Category:</strong> Web Dev</p>
+          <p>A web utility for solving Boolean algebra expressions and truth tables.</p>
+        </div>
+      </div>
+      <p id="no-projects-msg" class="hidden">No projects match the selected filter.</p>
     </section>
-  </section>
-    <section id="photos">
-  <h2>Gallery</h2>
-  <div class="underline"></div>
 
-  <figure>
-    <img src="images/photo1.jpg" alt="Chilling home outside">
-    <figcaption>1. Chilling home outside</figcaption>
-  </figure>
+    <!-- Learning Plan -->
+    <section id="plan" class="content-card">
+      <h2>Learning Plan</h2>
+      <div class="underline"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Practice Task</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML5 Structure</td>
+            <td>Build header, nav and sections with proper tags</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS Styling</td>
+            <td>Style gallery and make page responsive</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Media & Forms</td>
+            <td>Add video, audio and test contact form</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>GitHub & Testing</td>
+            <td>Upload project to GitHub and test on phone</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-  <figure>
-    <img src="images/photo2.jpg" alt="During church">
-    <figcaption>2. During church</figcaption>
-  </figure>
+    <!-- Photo Gallery Viewer -->
+    <section id="photos" class="content-card">
+      <h2>Photo Gallery</h2>
+      <div class="underline"></div>
+      <p>The following photographs represent my learning environment, academic interests and creative activities.</p>
 
-  <figure>
-    <img src="images/photo3.jpg" alt="New haircut">
-    <figcaption>3. New haircut</figcaption>
-  </figure>
+      <div class="gallery-controls">
+        <button id="prev-photo" class="btn-outline">Previous</button>
+        <button id="next-photo" class="btn-solid">Next</button>
+      </div>
+      <p id="photo-counter">Showing photo 1 of 3.</p>
 
-</section>
+      <div class="gallery-viewer">
+        <figure>
+          <img id="gallery-img" src="images/photo1.jpg" alt="Photo 1">
+          <figcaption id="gallery-caption">1. Chilling home outside</figcaption>
+        </figure>
+      </div>
+    </section>
 
-    <section id="media" class="content-section">
-  <h2>My Media</h2>
-  <div class="underline"></div>
-  
-  <h3>My Introduction Video</h3>
-  <video controls width="100%" src="videos/intro.mp4">
-    Your browser does not support video.
-  </video>
-  <p><strong>Summary:</strong> I am Lukas Mulusa, Computer Science at Mulungushi University, studying ICT251. One skill I want to learn is responsive CSS design for mobile phones.</p>
+    <!-- Media Section -->
+    <section id="media" class="content-card">
+      <h2>Media</h2>
+      <div class="underline"></div>
+      <h3>My Introduction Video</h3>
+      <video controls width="100%" src="videos/intro.mp4"></video>
+      <p><strong>Summary:</strong> I am Lukas Mulusa, studying Computer Science at Mulungushi University.</p>
 
-  <h3>My Voice Recording</h3>
-  <audio controls src="videos/voice.mp3">
-    Your browser does not support audio.
-  </audio>
-  <p>Description: This is my 1 minute audio about my passion and why I study web technology.</p>
-</section>
+      <h3>My Voice Recording</h3>
+      <audio controls preload="metadata" style="width: 100%; margin: 10px 0;">
+        <source src="videos/voice.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p><strong>Description:</strong> This is my 1 minute audio about my passion and why I study web technology.</p>
+    </section>
 
-    <section id="contact" class="content-section">
-  <h2>Contact Me</h2>
-  <div class="underline"></div>
+    <!-- Contact Form -->
+    <section id="contact" class="content-card">
+      <h2>Contact Me</h2>
+      <div class="underline"></div>
+      <p><strong>Phone:</strong> <a href="tel:+260771118742">0771118742</a></p>
+      <p><strong>Email:</strong> <a href="mailto:lukas.mulusa@gmail.com">lukas.mulusa@gmail.com</a></p>
 
-  <p><strong>Phone:</strong> <a href="tel:+260771118742">0771118742</a></p>
-  <p><strong>Email:</strong> <a href="mailto:lukas.mulusa@gmail.com">lukas.mulusa@gmail.com</a></p>
-  <p><strong>University:</strong> Mulungushi University, Kabwe, Zambia</p>
+      <form id="contact-form" action="#" method="post" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name">
+          <span class="error-message" id="name-error"></span>
+        </div>
 
-  <h3>Send Me a Message</h3>
-  <form action="#" method="post">
-    <div>
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email">
+          <span class="error-message" id="email-error"></span>
+        </div>
 
-    <div>
-      <label for="email">Email Address:</label><br>
-      <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-    </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <span class="error-message" id="message-error"></span>
+        </div>
 
-    <div>
-      <label for="topic">Topic:</label><br>
-      <select id="topic" name="topic">
-        <option value="general">General Inquiry</option>
-        <option value="web-help">Web Development Help</option>
-        <option value="collaboration">Project Collaboration</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
+        <button type="submit" class="btn-solid">Send Message</button>
+      </form>
 
-    <div>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-    </div>
-
-    <button type="submit">Send Message</button>
-    <p style="font-size:12px; color:#777; margin-top:8px;">Note: This form does not send data - browser demo only (action="#").</p>
-  </form>
-</section>
-
+      <div id="form-preview" class="preview-container hidden">
+        <h3>Submission Preview (Validated Locally)</h3>
+        <p><strong>Status:</strong> Data was validated successfully locally.</p>
+        <p><strong>Name:</strong> <span id="preview-name"></span></p>
+        <p><strong>Email:</strong> <span id="preview-email"></span></p>
+        <p><strong>Message:</strong> <span id="preview-message"></span></p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>@2026_Lukas_Mulusa</p>
+    <p> 2026 Lukas Mulusa | <a href="https://github.com/YOUR_USERNAME/ICT251-Activity3" target="_blank">View Source on GitHub</a></p>
   </footer>
-
-  <!-- ========= PART B1 ENDS HERE ========= -->
 
 </body>
 </html>
