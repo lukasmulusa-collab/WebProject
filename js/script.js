@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      1. PHOTO GALLERY CONTROLLER
      ========================================================================== */
-  // Ensure image filenames match the exact files in your local images/ folder
   const photos = [
     { 
       src: 'images/photo1.jpg', 
@@ -11,13 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     { 
       src: 'images/photo2.jpg', 
-      caption: '2. Workspace used for studying and programming.' 
+      caption: '2. after church.' 
     },
     { 
       src: 'images/photo3.jpg', 
-      caption: '3. Campus environment and learning activities.' 
+      caption: '3. new haircut done at Mulungushi University.' 
     }
   ];
+
+  // Preload images into memory so they switch instantly on click
+  photos.forEach(photo => {
+    const img = new Image();
+    img.src = photo.src;
+  });
 
   let currentIndex = 0;
 
